@@ -8,6 +8,7 @@ import model.avisoModel;
 import notificador.Notificador;
 import notificador.NotificadorApp;
 import notificador.sessaoNotificacao;
+import view.JanelaPrincipal;
 
 /**
  *
@@ -15,12 +16,13 @@ import notificador.sessaoNotificacao;
  */
 public class JanelaAvisos extends javax.swing.JInternalFrame {
     public String aviso;
-    
+    private JanelaPrincipal janelaPrincipal;
     /**
      * Creates new form JanelaAvisos
      */
     public JanelaAvisos() {
         initComponents();
+        this.janelaPrincipal = janelaPrincipal;
     }
 
     /**
@@ -136,6 +138,8 @@ public class JanelaAvisos extends javax.swing.JInternalFrame {
         a.setImportancia((String) cbImportancia.getSelectedItem());
         
         sessaoNotificacao.nomeAviso = txtAviso.getText();
+        
+        janelaPrincipal.mostrarMensagem("Aviso: " + aviso);
         
         NotificadorApp n = new NotificadorApp();
         n.notificarUsuario(sessaoNotificacao.nomeUsuario, sessaoNotificacao.nomeAviso);

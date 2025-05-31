@@ -148,8 +148,9 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_sairActionPerformed
 
-    public static void mostrarMensagem(String msg){
+    public void mostrarMensagem(String msg){
         mensagemRecebida = msg;
+        JOptionPane.showMessageDialog(this, msg); 
     }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
