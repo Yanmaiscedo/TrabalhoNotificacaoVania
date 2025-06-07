@@ -1,0 +1,11 @@
+CREATE DATABASE usuario;
+DROP DATABASE usuario;
+USE usuario;
+
+CREATE TABLE `usuario`.`cadastro_usuario` (
+  `id`           INT      NOT  NULL AUTO_INCREMENT COMMENT '',
+  `nome`      VARCHAR(100) NOT NULL                COMMENT '',
+  `email`      VARCHAR(100) NOT NULL                COMMENT '',
+  PRIMARY KEY (`id`)                               COMMENT '');
+
+select * from cadastro_usuario;
